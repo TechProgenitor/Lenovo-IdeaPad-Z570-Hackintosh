@@ -32,4 +32,4 @@ This repo has an SSDT-PM that's designed for the Intel Core i5-2430M. If you hav
 | | |
 | --- | --- |
 | WiFi/Bluetooth Don't Work | Requires somehow modifying the BIOS to remove the WLAN/WWAN whitelist. Alternatively, you can enable wireless functionality with a USB WiFi Adapter. |
-| VGA output remains connected after disconnecting from an external monitor and running "Detect Displays" | This has something to do with the framebuffer patch and/or ACPI methods. Avoiding the VGA output is recommended, as the failed disconnect can eventually lead to a system crash. |
+| VGA output remains connected after disconnecting from an external monitor and running "Detect Displays" | This has something to do with the framebuffer patch and/or ACPI methods. Putting the computer to sleep and waking it up forces macOS to re-enumerate all video ports, disconnecting the VGA output, and resolving the issue.<br><br>Closing the laptop lid won't trigger sleep if macOS still detects an external VGA monitor. You'll need to use the Fn+F1 keyboard shortcut, or select "Sleep" from the Apple menu. |
